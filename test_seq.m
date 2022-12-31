@@ -14,7 +14,7 @@ single_run_flag = 0;
 show_animate    = 0;   # write the squence on the output before plotting
 t_interval      = 0.1; # pause interval for writing to output
 ## sequential run
-plot_collaz_data = 1;  # collect series data along with stop time data
+plot_collaz_data = 0;  # collect series data along with stop time data
 
 if(single_run_flag)
 	mode_  = 1; ## colect series data
