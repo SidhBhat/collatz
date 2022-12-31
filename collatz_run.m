@@ -4,7 +4,7 @@ function result = collatz_run(num, _mode)
 
 	## process only int values
 	if(!isinteger(num))
-		printf("number has to of integral type.\n");;
+		printf("number has be to of integral type.\n");;
 		result.X = uint64(0);
 		result.Y = uint64(0);
 		result.stop_time = uint64(0);

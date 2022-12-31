@@ -1,8 +1,8 @@
-### collatz  
+### collatz
 
 ---
 
-A Program to get data for the collatz seris, the famous unsolved mathematical problem.  
+A Program to get data for the collatz series, the famous unsolved mathematical problem.
 
 ---
 
