@@ -1,4 +1,5 @@
-function a = collaz(val = uint64(1))
+# the collatz function
+function a = collatz(val = uint64(1))
 	if(!isinteger(val))
 		printf("number has to of integral type.\n");
 		a = 0;

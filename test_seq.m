@@ -14,11 +14,11 @@ single_run_flag = 0;
 show_animate    = 0;   # write the squence on the output before plotting
 t_interval      = 0.1; # pause interval for writing to output
 ## sequential run
-plot_collaz_data = 0;  # collect series data along with stop time data
+plot_collatz_data = 0;  # collect series data along with stop time data
 
 if(single_run_flag)
 	mode_  = 1; ## colect series data
-	result = collaz_run(num, mode_);
+	result = collatz_run(num, mode_);
 	if(show_animate)
 		if(!t_interval)
 			disp("Error: t_interval must be non-zero");
@@ -58,7 +58,7 @@ else
 	clf;
 
 	mode_ = 0; # do not collect series data
-	if(plot_collaz_data)
+	if(plot_collatz_data)
 		hold;
 		mode_ = 1; ## colect series data
 	endif
@@ -69,19 +69,19 @@ else
 
 	for number = n_values
 		n = uint64(number);
-		result = collaz_run(n,mode_);
+		result = collatz_run(n,mode_);
 
 		stop_times(n)       = result.stop_time;
 		total_stop_times(n) = result.total_stop_time;
 
-		if(plot_collaz_data)
+		if(plot_collatz_data)
 			## plot series data
 			plot(result.X, result.Y,"-k","markersize",5);
 		endif
 	endfor
 	clear result;
 
-	if(plot_collaz_data)
+	if(plot_collatz_data)
 		title(sprintf("Collaz Conjecture\na(n) vs n for n=1,2,3..%d",num), "fontsize", 10);
 		grid("on");
 		xlabel("n");

@@ -1,6 +1,6 @@
 # _mode = 0 : collect only stop times
 # _mode = 1 : collect data of the collatz series
-function result = collaz_run(num, _mode)
+function result = collatz_run(num, _mode)
 
 	## process only int values
 	if(!isinteger(num))
@@ -28,7 +28,7 @@ function result = collaz_run(num, _mode)
 				result.stop_time_flag = 1;
 				result.stop_time      = n;
 			endif
-			num = collaz(num);
+			num = collatz(num);
 			n++;
 		endwhile
 		result.X(n+1) = n;
@@ -39,7 +39,7 @@ function result = collaz_run(num, _mode)
 				result.stop_time_flag = 1;
 				result.stop_time      = n;
 			endif
-			num = collaz(num);
+			num = collatz(num);
 			n++;
 		endwhile
 		result.X = uint64(0);
