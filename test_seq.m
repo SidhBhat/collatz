@@ -2,19 +2,34 @@
 1;
 
 clear;
-num = 500;
-num = uint64(num);
 
+##----------------Configuration--------------##
+# The number to test the collatz conjecture on
+num = 5000;
+
+
+# Setting this to 1, collects data only for one sequence where
+# the number is set by num.
+# For 0, the programs collects data for every series between 1 and num.
+single_run_flag = 0;
 ## run mode:
 # 0 : collect and plot stop time data
 # 1 : collect and plot series data
-single_run_flag = 0;
 
-## single run
-show_animate    = 0;   # write the squence on the output before plotting
-t_interval      = 0.1; # pause interval for writing to output
-## sequential run
+
+## only applies when single_run_flag = 1
+show_animate      = 0;   # write the sequence on the output (terminal) before plotting
+
+## only applies when single_run_flag = 0
+## sequential run: enabling this option requirs a lot of memory
 plot_collatz_data = 0;  # collect series data along with stop time data
+
+## -----------START PROGRAM------------------##
+# DO NOT EDIT ANYTHING BELOW THIS!!!
+
+#initialise
+t_interval = 0.1; # pause interval for writing to output
+num = uint64(num);
 
 if(single_run_flag)
 	mode_  = 1; ## colect series data
