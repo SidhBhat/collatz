@@ -1,6 +1,6 @@
 # collatz
 
-A program to test the collatz conjecture[^1] in ocatve/matlab. This script computes various data related
+A program to test the collatz conjecture[^1] in ocatve. This script computes various data related
 to the collatz conjecture, presenting them is suitable graphs
 
 ## How to Use
