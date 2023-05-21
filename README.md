@@ -42,4 +42,4 @@ When we set `single_run_flag = 1`  only one iteration of the collatz series is p
 ![single run with number = 27](images/multi_run_n_5000.png)
 
 
-[^1] [Collatz Conjecture](https://en.wikipedia.org/wiki/Collatz_conjecture#Statement_of_the_problem)
+[^1]: [Collatz Conjecture](https://en.wikipedia.org/wiki/Collatz_conjecture#Statement_of_the_problem)
